@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+#main{
+    position: relative;
+    background-color: #101116;
+}
+body{
+    overflow-x:hidden ;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: #cb1234;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #880019;
+    border-radius: 50px;
+}
+
+
+/* <=============================== Navabar Styling Here ==========================> */
+
+.navabar{
+    width: 100%;
+    height: 120px;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    z-index: 200;
+}
+#logo img{
+    width: 40%;
+}
+.listing ul{
+    list-style: none;
+}
+.listing ul li{
+    display: inline-block;
+    margin: 0 18px;
+}
+.listing ul li a{
+    text-decoration: none;
+    color: white;
+    transition: .5s ease;
+    font-weight: 600;
+}
+.listing ul li a:hover{
+    color: #cb1234;
+}
+.listing ul li:nth-child(4){
+    position: relative;
+}
+.listing ul li:nth-child(4)::before{
+    content: "";
+    width: 44px;
+    height: 1px;
+    background-color: #cb1234;
+    position: absolute;
+    bottom: -10%;
+    left: 45%;
+}
+.listing ul li:nth-child(4) p{
+    color: rgb(182, 182, 182);
+    position: absolute;
+    font-size: 12px;
+    top: 130%;
+    left: 35%;
+    width: 100%;
+}
+.listing ul li:nth-child(4) a{
+    color: #cb1234;
+    padding-bottom: 5px;
+}
+.listing ul li:nth-child(4) a i{
+    margin: 0 5px;
+}
+
+.listing ul li:nth-child(4)::after{
+    content: "";
+    width: 1px;
+    height: 45px;
+    background-color: #cb1234;
+    position: absolute;
+    bottom: -100%;
+    left: 135%;
+}
+.listing ul li:nth-child(5){
+    position: relative;
+}
+.listing ul li:nth-child(5) a i{
+    color: #cb1234;
+    margin: 0 5px;
+}
+.listing ul li:nth-child(5) p{
+    color: rgb(182, 182, 182);
+    position: absolute;
+    font-size: 12px;
+    top: 130%;
+    left: 18%;
+    width: 100%;
+}
+.listing ul li:nth-child(5)::after{
+    content: "";
+    width: 1px;
+    height: 45px;
+    background-color: #cb1234;
+    position: absolute;
+    bottom: -100%;
+    left: 110%;
+}
+.listing ul li:nth-child(6){
+    position: relative;
+}
+.listing ul li:nth-child(6) a i{
+    color: #cb1234;
+    margin: 0 5px;
+}
+.listing ul li:nth-child(6) p{
+    color:#cb1234 ;
+    position: absolute;
+    font-size: 12px;
+    top: 130%;
+    left: 22%;
+    width: 100%;
+}
+
+/* <=============================== Herobox Styling Here ==========================> */
+
+.herobox{
+    width: 100%;
+    height: 110vh;
+    background-image: url('./assests/main\ image.jpg');
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.herobox::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0) -34%, rgba(0,0,0,0.21052170868347342) 0%, rgba(0,0,0,0.6306897759103641) 100%);
+    position: absolute;
+}
+.fire_overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.fire_overlay img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.glow{
+    width: 3000px;
+    height: 3000px;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0) -34%, rgba(255,85,0,1) 0%, rgba(255,166,0,0) 39%);
+    border-radius: 50%;
+    position: absolute;
+    right: -72%;
+    top: -50%;
+}
+.product_image img{
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    width: 40%;
+    z-index: 3;
+    animation: moving 5s ease-in-out infinite alternate;
+}
+@keyframes moving {
+    from{
+        top: 25%; 
+    }
+    to{
+        top: 20%;
+    }
+}
+.chilli img{
+    position: absolute;
+    width: 18%;
+    transform: rotateX(10deg) rotateY(200deg);
+    transform-origin: center;
+    right: 5%;
+    top: 8%;
+}
+.motionChilli img{
+    position: absolute;
+    width: 22%;
+    right: 50%;
+    top: 65%;
+}
+.tomato img{
+    position: absolute;
+    width: 18%;
+    left: 0%;
+    top: 10%;
+    z-index: 6;
+}
+
+.motionTomato img{
+    position: absolute;
+    width: 25%;
+    left: -12%;
+    transform-origin: center;
+    transform: scaleY(1.2);
+    top: 55%;
+    opacity: 80%;
+}
+.herobox h1{
+    color: white;
+    position: absolute;
+    z-index: 5;
+    top: 30%;
+    left: 13%;
+    font-size: 6vw;
+    width: 30%;
+    line-height: 95px;
+    font-weight: 700;
+}
+.herobox p{
+    position: absolute;
+    top: 58%;
+    left: 13%;
+    z-index: 5;
+    color: rgb(127, 127, 127);
+    width: 33%;
+    word-spacing: 1px;
+}
+.herobox a.first{
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+    top: 70%;
+    left: 13%;
+    text-decoration: none;
+    color: white;
+    width: 160px;
+    height: 50px;
+    border-radius: 50px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) -34%, rgba(203,18,52,1) 0%, rgba(134,8,31,1) 100%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px black;
+    overflow: hidden;
+}
+.herobox a.first:hover::before{
+
+    animation: pass .8s ease-in-out 1 ;
+}
+@keyframes pass {
+    from{
+        position: absolute;
+        left: -10%;
+        top: -80%; 
+    }
+    to{
+        position: absolute;
+        left: 150%;
+        top: -80%;
+    }
+}
+.herobox a.first::before{
+    content: "";
+    width: 10px;
+    height: 120px;
+    transform: rotate(45deg);
+    transform-origin: center;
+    background-color: white;
+    position: absolute;
+    left: -20%;
+    top: -80%;
+}
+.herobox a.first i{
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+.herobox a.second{
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+    top: 70%;
+    left: 25%;
+    text-decoration: none;
+    color: white;
+    width: 160px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease;
+}
+.herobox a.second:hover{
+    background-color: #cb1234;
+    border: 1px solid #cb1234;
+}
+.herobox a.second i{
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+.herobox a.third{
+    display: inline-block;
+    position: absolute;
+    top: 36%;
+    left: 55%;
+    z-index: 5;
+    text-decoration: none;
+    color: white;
+    width: 160px;
+    height: 50px;
+    border-radius: 50px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) -34%, rgba(255,0,47,1) 0%, rgba(135,0,25,1) 100%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.522);
+    animation: btnMove 5s ease-in-out infinite alternate;
+}
+@keyframes btnMove {
+    from{
+        top: 36%; 
+    }
+    to{
+        top: 32%;
+    }
+    
+}
+.herobox a.third i{
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+/* <=============================== Section 1 Styling Here ==========================> */
+
+.section1{
+    width: 100%;
+    height: 180vh;
+    background-color: #16171a;
+    padding: 0 100px;
+    position: relative;
+}
+.section1 h1{
+    color: white;
+    font-size: 3vw;
+    position: absolute;
+    top: 8%;
+}
+.section1 a.footer_btn{
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease;
+    font-weight: 800;
+}
+.section1 a.footer_btn:hover{
+    background-color: #cb1234;
+    color: white;
+}
+.menu_btn{
+    width: 55%;
+    height: 80px;
+    position: absolute;
+    top: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu_btn a{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(130, 130, 130);
+    width: 160px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #343434;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.menu_btn a.active{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) -34%, rgba(203,18,52,1) 0%, rgba(134,8,31,1) 100%);
+    color: white;
+}
+.gallery{
+    width: 85%;
+    height: 70%;
+    position: absolute;
+    top: 22%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 52;
+}
+.row_1{
+    width: 100%;
+    height: 48%;
+    display: flex;
+    justify-content: space-between;
+}
+.col_1{
+    width: 23.5%;
+    height: 100%;
+    background-image: url('./assests/main\ image.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transform-origin: bottom right;
+}
+.col_1:nth-child(4){
+    transform-origin: bottom left;
+}
+.col_1::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0) -34%, rgba(135,0,25,0) 0%, rgba(0,0,0,0.6783088235294117) 100%);
+    position: absolute;
+}
+.col_1 .price_tag p{
+    color: rgb(211, 211, 211);
+    position: absolute;
+    font-weight: 700;
+    font-size: 1.4vw;
+    top: 5%;
+    left: 5%;
+}
+.col_1 img{
+    width: 260px;
+    z-index: 50;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.col_1 h2{
+    color: rgb(211, 211, 211);
+    position: absolute;
+    bottom: 28%;
+    left: 5%;
+    font-size: 22px;
+}
+.col_1 .sub_info p{
+    color: rgb(128, 128, 128);
+    font-size: 11px;
+    width: 90%;
+    position: absolute;
+    bottom: 17%;
+    left: 5%;
+}
+.counter{
+    width: 90px;
+    height: 30px;
+    background-color: #212121;
+    position: absolute;
+    border-radius: 50px;
+    bottom: 5%;
+    left: 5%;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.counter p{
+    color: white;
+    font-weight: 700;
+    padding: 0 20px;
+}
+.counter span{
+    cursor: pointer;
+    color: rgb(178, 178, 178);
+}
+.cart_btn{
+    width: 60px;
+    height: 30px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) -34%, rgba(115,212,0,1) 0%, rgba(53,116,0,1) 100%);
+    border-radius: 50px;
+    position: absolute;
+    bottom: 5%;
+    left: 38%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.leaves img{
+    width: 16%;
+    position: absolute;
+    right: 1%;
+    top:15%;
+    transform: rotate(30deg);
+}
+.mochilli img{
+    width: 20%;
+    position: absolute;
+    bottom: 5%;
+    left: -8%;
+    transform: rotate(-90deg);
+}
+.motomato img{
+    width: 22%;
+    position: absolute;
+    right: -5%;
+    bottom: -10%;
+    z-index: 50;
+}
+.fire_particles img{
+    width: 50%;
+    position: absolute;
+    bottom: -40%;
+    left: -30%;
+    z-index: 50;
+}
+/* <=============================== Section 2 Styling Here ==========================> */
+
+.section2{
+    width: 100%;
+    height: 100vh;
+    background-color: #16171a;
+    position: relative;
+    overflow: hidden;
+}
+.footer_primary{
+    width: 100%;
+    height: 65%;
+    background-image: url('./assests/main\ image.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fire_particles_section2 img{
+    z-index: 50;
+    position: absolute;
+    right: -25%;
+    top: 30%;
+    width: 32%;
+}
+.heading_text h2{
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+    position: absolute;
+    left: 10%;
+    top: 15%;
+}
+.heading_text h1{
+    color: white;
+    font-size: 66px;
+    width: 20%;
+    line-height: 70px;
+    position: absolute;
+    left: 10%;
+    top: 25%;
+}
+.button_section{
+    width: 30%;
+    height: 20%;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.button_section .btn_1{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.button_section .btn_1 i{
+    color: white;
+    font-size: 32px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) -34%, rgba(255,0,47,1) 0%, rgba(198,0,36,1) 100%);
+    box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.549);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button_section .btn_1 h2{
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    left: 35%;
+    top: 22%;
+    width: 80%;
+}
+.button_section .btn_1 p{
+    color: grey;
+    width: 80%;
+    font-size: 12px;
+    position: absolute;
+    left: 35%;
+    bottom: 12%;
+}
+.fry_pan img{
+    width: 35%;
+    position: absolute;
+    right: 0%;
+    transform: rotate(90deg);
+    top: 28%;
+}
+.motion_green_chilli img{ 
+    width: 12%;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 80%;
+    left: 10%;
+}
+.onion_with_chilli img{
+    width: 20%;
+    position: absolute;
+    right: 19%;
+    top: -20%;
+    transform: rotate(-20deg);
+}
